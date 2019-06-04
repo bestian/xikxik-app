@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view :xikxik="$localStorage.xikxik" :newsList="$localStorage.newsList" :poet="$localStorage.poet" @add="add" @del="del" @reset="reset" @addNews="addNews" @delNews="delNews" @resetNews="resetNews" @addPoet="addPoet" @delPoet="delPoet" @resetPoet="resetPoet"></router-view>
+    <router-view :xikxik="xikxik" :newsList="newsList" :poet="poet"></router-view>
   </div>
 </template>
 
@@ -162,67 +162,14 @@ var poetry = [
 
 export default {
   name: 'app',
-  localStorage: {
-    xikxik: {
-      type: Object,
-      default: dat
-    },
-    newsList: {
-      type: Object,
-      default: news
-    },
-    poet: {
-      type: Object,
-      default: poetry
-    }
-  },
   data () {
     return {
+      xikxik: dat,
+      newsList: news,
+      poet: poetry
     }
   },
   methods: {
-    add: function (n, i) {
-      this.addItem('xikxik', n, i)
-    },
-    del: function (n, i) {
-      this.delItem('xikxik', n, i)
-    },
-    reset: function () {
-      this.$localStorage.set('xikxik', dat)
-      this.$forceUpdate()
-    },
-    addNews: function (n, i) {
-      this.addItem('newsList', n, i)
-    },
-    delNews: function (n, i) {
-      this.delItem('newsList', n, i)
-    },
-    resetNews: function () {
-      this.$localStorage.set('newsList', news)
-      this.$forceUpdate()
-    },
-    addPoet: function (n, i) {
-      this.addItem('poet', n, i)
-    },
-    delPoet: function (n, i) {
-      this.delItem('poet', n, i)
-    },
-    resetPoet: function () {
-      this.$localStorage.set('poet', poetry)
-      this.$forceUpdate()
-    },
-    addItem: function (t, n, i) {
-      var p = this.$localStorage[t]
-      p.push(i)
-      this.$localStorage.set(t, p)
-      this.$forceUpdate()
-    },
-    delItem: function (t, n, i) {
-      var l = this.$localStorage[t]
-      l = l.filter(function (x) { return x !== i })
-      this.$localStorage.set(t, l)
-      this.$forceUpdate()
-    }
   },
   mounted () {
   }

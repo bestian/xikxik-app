@@ -9,7 +9,7 @@
           <h1>拾詩氏</h1><img src="http://lorempixel.com/400/200/animals/" />
           <hr />
           <div class="ui list">
-            <div class="item" v-for="p in poet" v-bind:key="p">
+            <div class="item" v-for="(p, idx) in poet" v-bind:key="idx">
               <h2>{{ parse(p) }}</h2>
             </div>
           </div>
@@ -19,7 +19,7 @@
           <InArticleAdsense data-ad-client="ca-pub-7209910540592367" data-ad-slot="8130621052"></InArticleAdsense>
           <h2>(本報訊)</h2>
           <div class="ui bulleted celled list">
-            <div class="item" v-for="n in newsList" v-bind:key="n">
+            <div class="item" v-for="(n, idx) in newsList" v-bind:key="idx">
               <h3>{{ parse(n) }}</h3>
             </div>
           </div>
