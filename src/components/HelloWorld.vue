@@ -1,45 +1,32 @@
-<template>
-  <div class="hello">
-    <div class="ui container grid">
-      <div class="one column row">
-        <div class="column"><a class="ui huge green button" onclick="location.reload()">再來！</a></div>
-      </div>
-      <div class="two column doubling row" id="poet">
-        <div class="six wide column ui teal segment">
-          <h1>拾詩氏</h1><img src="http://lorempixel.com/400/200/animals/" />
-          <hr />
-          <div class="ui list">
-            <div class="item" v-for="(p, idx) in poet" v-bind:key="idx">
-              <h2>{{ parse(p) }}</h2>
-            </div>
-          </div>
-        </div>
-        <div class="ten wide column left aligned ui black segment">
-          <h1>小道小報 {{ today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate() }}</h1>
-          <InArticleAdsense data-ad-client="ca-pub-7209910540592367" data-ad-slot="8130621052"></InArticleAdsense>
-          <h2>(本報訊)</h2>
-          <div class="ui bulleted celled list">
-            <div class="item" v-for="(n, idx) in newsList" v-bind:key="idx">
-              <h3>{{ parse(n) }}</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="one column row">
-        <div class="column ui segment">
-          <InArticleAdsense data-ad-client="ca-pub-7209910540592367" data-ad-slot="8130621052"></InArticleAdsense>
-        </div>
-      </div>
-      <div class="one column row">
-        <div class="column"><a class="ui huge green button" onclick="location.reload()">再來！</a></div>
-      </div>
-      <div class="one column row">
-        <div class="column">
-          <div class="fb-comments" data-href="http://xikxik.bestian.tw" data-width="" data-numposts="5"></div>
-        </div>
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+  .hello
+    .ui.container.grid
+      .one.column.row
+        .column
+          a.ui.huge.green.button(onclick="location.reload()") 再來！
+      #poet.two.column.doubling.row
+        .six.wide.column.ui.teal.segment
+          h1 拾詩氏
+          img(src="http://lorempixel.com/400/200/animals/")
+          hr
+          .ui.list
+            .item(v-for="(p, idx) in poet" v-bind:key="idx")
+              h2 {{ parse(p) }}
+        .ten.wide.column.left.aligned.ui.black.segment
+          h1 小道小報 {{ today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate() }}
+          h2 (本報訊)
+          .ui.bulleted.celled.list
+            .item(v-for="(n, idx) in newsList" v-bind:key="idx")
+              h3 {{ parse(n) }}
+      .one.column.row
+        .column.ui.segment
+      .one.column.row
+        .column
+          a.ui.huge.green.button(onclick="location.reload()") 再來！
+      .one.column.row
+        .column
+          .fb-comments(data-href="http://xikxik.bestian.tw" data-width="" data-numposts="5")
+
 </template>
 
 

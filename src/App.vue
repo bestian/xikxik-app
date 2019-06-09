@@ -1,7 +1,6 @@
-<template>
-  <div id="app">
-    <router-view :xikxik="xikxik" :newsList="newsList" :poet="poet"></router-view>
-  </div>
+<template lang="pug">
+  #app
+    router-view(:xikxik="xikxik" :newsList="newsList" :poet="poet")
 </template>
 
 <script>
