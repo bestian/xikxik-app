@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="tw.bestian.xikxik" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>xikxik</name>
-     <icon src="res/ios/Icon-50.png" />
+     <icon src="res/icon.png" />
           <platform name="ios">
               <!-- iOS 8.0+ -->
               <icon src="res/ios/Icon-1024.png" width="1024" height="1024" />
