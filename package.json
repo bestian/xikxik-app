@@ -21,9 +21,7 @@
     "properties-parser": "^0.3.1",
     "semantic-ui-css": "^2.4.1",
     "vue": "^2.6.10",
-    "vue-google-adsense": "^1.6.0",
-    "vue-router": "^3.0.6",
-    "vue-script2": "^2.0.3"
+    "vue-router": "^3.0.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.8.0",

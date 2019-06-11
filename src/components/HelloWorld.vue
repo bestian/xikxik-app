@@ -22,9 +22,6 @@
       .one.column.row
         .column
           a.ui.huge.green.button(onclick="location.reload()") 再來！
-      .one.column.row
-        .column
-          .fb-comments(data-href="http://xikxik.bestian.tw" data-width="" data-numposts="5")
 
 </template>
 
