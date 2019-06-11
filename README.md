@@ -3,27 +3,15 @@
 ## Project setup
 ```
 npm install
+vue add cordova
 ```
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run cordova-serve-ios
 ```
 
 ### Compiles and minifies for production
 ```
-npm run build
+npm run cordova-build-ios
 ```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
