@@ -7,7 +7,6 @@
       #poet.two.column.doubling.row
         .six.wide.column.ui.teal.segment
           h1 拾詩氏
-          img(src="http://lorempixel.com/400/200/animals/")
           hr
           .ui.list
             .item(v-for="(p, idx) in poet" v-bind:key="idx")
