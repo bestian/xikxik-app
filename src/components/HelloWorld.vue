@@ -12,7 +12,7 @@
             .item(v-for="(p, idx) in poet" v-bind:key="idx")
               h2 {{ parse(p) }}
         .ten.wide.column.left.aligned.ui.black.segment
-          h1 小道小報 {{ today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate() }}
+          h1 小道小報
           h2 (本報訊)
           .ui.bulleted.celled.list
             .item(v-for="(n, idx) in newsList" v-bind:key="idx")
@@ -31,7 +31,6 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      today: new Date()
     }
   },
   props: ['xikxik', 'newsList', 'poet'],
