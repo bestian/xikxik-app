@@ -1,13 +1,14 @@
 <template>
-  <app>
-    <router-view :xikxik="xikxik" :newsList="newsList" :poet="poet"></router-view>
-  </app>
+  <hello-world :xikxik="xikxik" :newsList="newsList" :poet="poet"></hello-world>
 </template>
 
 <script>
 
+import HelloWorld from './components/HelloWorld'
+
 export default {
   name: 'app',
+  components: { HelloWorld },
   data () {
     return {
       xikxik: {

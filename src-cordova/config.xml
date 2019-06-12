@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="tw.bestian.xikxik" version="1.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Xikxik</name>
+    <preference name="WKSuspendInBackground" value="false" />
     <icon src="res/Icon.png" />
     <platform name="ios">
         <icon height="1024" src="res/ios/Icon-1024.png" width="1024" />
@@ -41,7 +42,8 @@
     <author email="bestian@gmail.com" href="http://www.bestian.tw">
         Bestian Tang
     </author>
-    <content src="index.html" />
+    <content src="http://192.168.2.129:8080" />
+<allow-navigation href="http://192.168.2.129:8080" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
