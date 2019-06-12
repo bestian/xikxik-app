@@ -1,6 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="tw.bestian.xikxik" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <preference name="BackupWebStorage" value="local"/>
+    <preference name="loadUrlTimeoutValue" value="700000" />
+    <preference name="WKSuspendInBackground" value="false" />
+    <platform name="ios">
+      <config-file platform="ios" target="*-Info.plist" parent="NSAppTransportSecurity">
+          <dict>
+              <key>NSAllowsArbitraryLoads</key><true/>
+          </dict>
+      </config-file>
+  </platform>
     <name>xikxik</name>
      <icon src="res/icon.png" />
           <platform name="ios">
@@ -49,6 +58,7 @@
         Bestian Tang
     </author>
     <content src="http://192.168.2.129:8080" />
+<allow-navigation href="http://192.168.2.129:8080" />
 <allow-navigation href="http://192.168.2.129:8080" />
 <allow-navigation href="http://192.168.2.129:8080" />
 <allow-navigation href="http://192.168.2.129:8080" />
