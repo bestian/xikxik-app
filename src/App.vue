@@ -1,6 +1,6 @@
 <template>
   <app>
-<!--    <router-view :xikxik="xikxik" :newsList="newsList" :poet="poet"></router-view> -->
+    <router-view :xikxik="xikxik" :newsList="newsList" :poet="poet"></router-view>
   </app>
 </template>
 
